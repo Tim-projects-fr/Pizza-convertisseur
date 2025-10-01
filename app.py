@@ -2,6 +2,8 @@
 import streamlit as st
 import pandas as pd
 from io import BytesIO
+from openpyxl import load_workbook
+
 
 st.title(" Transformation des commandes pizza")
 
@@ -84,13 +86,16 @@ if fichier is not None:
     )
     zerop=["remarque"]
     df_new[zerop] = df_new[zerop].replace(0, "")
-    df_new.to_excel("v1.xlsx", index=False)
 
+# 📝 1️⃣ Ton DataFrame final (au lieu de l'enregistrer sur le disque)
+    output = BytesIO()
+    df_new.to_excel(output, index=False)   # écriture dans un "fichier virtuel"
+    output.seek(0)  # remet le curseur au début pour pouvoir relire
 
-
-# Charger le fichier avec openpyxl
-    wb = load_workbook("v1.xlsx")
+# 📂 2️⃣ Charger ce fichier virtuel avec openpyxl
+    wb = load_workbook(output)
     ws = wb.active
+
 
 # Adapter la largeur des colonnes
     for col in ws.columns:
@@ -102,7 +107,9 @@ if fichier is not None:
         ws.column_dimensions[column].width = max_length + 2  # +2 pour un peu d'espace
 
 # Sauvegarder
-    wb.save("testv2.xlsx")
+    final_output = BytesIO()
+    wb.save(final_output)
+    final_output.seek(0)
 
     # Étape 2 : Afficher un aperçu
     st.write("Aperçu du fichier transformé 👇")
