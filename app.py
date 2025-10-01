@@ -90,7 +90,7 @@ if fichier is not None:
 
     from openpyxl import load_workbook
     wb = load_workbook("v1.xlsx")
-    s = wb.active
+    ws = wb.active
 
 
 
