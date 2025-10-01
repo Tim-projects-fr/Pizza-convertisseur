@@ -103,7 +103,7 @@ if fichier is not None:
                 max_length = max(max_length, len(str(cell.value)))
         ws.column_dimensions[column].width = max_length + 2  # +2 pour un peu d'espace
 
-     wb.save("commandes_finales.xlsx")
+    wb.save("commandes_finales.xlsx")
     # Étape 2 : Afficher un aperçu
     st.write("Aperçu du fichier transformé 👇")
     st.dataframe(df.head())
