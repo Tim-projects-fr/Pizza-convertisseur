@@ -16,8 +16,8 @@ st.markdown(
     <ol>
         <li> Mettez le fichier que vous recevez de Rico ( un truc du genre ordrerxxxx (.xlsx) </li>
         <li>Télécharger le fichier transformé qui va s'appeler un truc du style commande traitées</li><br></br>
-    <p> Ensuite, vous ouvrez le super document word dans le drive et vous faites : </p>
-        <li> A l'ouverture du fichier il va probablement vous demander un document à mettre, c'est l'ancien qui est sur le drive.</li>
+    <p> Ensuite, vous ouvrez le super document WORD du drive  </p>
+        <li> A l'ouverture du fichier il va probablement vous demander un document à mettre. Télécharger le document "Tab à pizza" du drive et mettez le quand Word vous le demande</li>
         <li> Ensuite quand le document Word est bien ouvert ( si il vous demande des trucs appuyer sur ok à chaque fois), appuyez sur l'onglet publipostage</li>
         <li> Dans l'onglet publipostage, il faut appuyer sur - Sélectionner des destinataires -> Utiliser une liste existante </li>
         <li> Ensuite, choisissez bien cette fois le fichier transformé ("Commandes_traitées")
