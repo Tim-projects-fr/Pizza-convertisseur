@@ -88,7 +88,7 @@ if fichier is not None:
     df["prix_hawai_14"] = df["hawai"] * 14
     df["prix_jambon_14"] = df["jambon"] * 14
     df["prix_margherita_12"] = df["margherita"] * 12
-    df["prix_jambon_champi_14"] = df["jambon_champi"] *12
+    df["prix_jambon_champi_14"] = df["jambon_champi"] *14
     df["prix_funghi_14"] = df["funghi"]*14
     df["prix total"] = df["prix_hawai_14"] + df["prix_jambon_14"] + df["prix_margherita_12"] + df["prix_jambon_champi_14"] + df["prix_funghi_14"]
 
